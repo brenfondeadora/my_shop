@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: check-yaml
+  
+  - repo: local
+    hooks:
+      - id: flutter-format
+        name: Format Flutter Code
+        entry: fvm flutter format .
+        language: system
+        pass_filenames: false
+
+      - id: flutter-analyze
+        name: Analyze Flutter Code
+        entry: fvm flutter analyze
+        language: system
+        pass_filenames: false
+
+      - id: flutter-import-sorter
+        name: Organize imports
+        entry: fvm flutter pub run import_sorter:main lib\/* test\/*
+        language: system
+        pass_filenames: false
