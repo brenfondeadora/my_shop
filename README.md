@@ -2,15 +2,18 @@
 
 A new Flutter project.
 
-## Getting Started
+## Clean Architecture
 
-This project is a starting point for a Flutter application.
+This project is based on the tutorial of clean architecture applying TDD on flutter
 
-A few resources to get you started if this is your first Flutter project:
+For more refereces:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- [Youtube - Flutter TDD Clean Architecture Course](https://www.youtube.com/watch?v=KjE2IDphA_U&list=PLB6lc7nQ1n4iYGE_khpXRdJkJEp9WOech)
+- [Flutter TDD Clean Architecture Course](https://resocoder.com/2019/08/27/flutter-tdd-clean-architecture-course-1-explanation-project-structure/)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Clean Architecture Structure](https://i1.wp.com/resocoder.com/wp-content/uploads/2019/08/CleanArchitecture.jpg?w=772&ssl=1)
+
+## Visual References
+
+- [Ecommerce Mobile App](https://dribbble.com/shots/14187487-Ecommerce-Mobile-App)
+- [Shoes Online Shop Mobile Apps](https://dribbble.com/shots/15909775-Shoes-Online-Shop-Mobile-Apps-Animation)
