@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:my_shop/features/products/domain/entities/product.dart';
@@ -38,7 +36,7 @@ class ProductModel extends Product {
     @required String title,
     @required String details,
     @required String image,
-    @required List<String> sizes,
+    List<String> sizes,
     @required double price,
   }) : super(
           id: id,
@@ -55,7 +53,9 @@ class ProductModel extends Product {
       title: json['title'],
       details: json['details'],
       image: json['image'],
-      sizes: List<String>.from(json["sizes"].map((x) => x)),
+      sizes: json["sizes"] != null
+          ? List<String>.from(json["sizes"].map((x) => x))
+          : [],
       price: (json['price'] as num).toDouble(),
     );
   }

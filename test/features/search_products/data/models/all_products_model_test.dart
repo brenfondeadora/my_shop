@@ -14,7 +14,20 @@ void main() {
         details: 'Nostalgia de los 90s',
         image: 'https://via.placeholder.com/150',
         sizes: ['5.5', '6', '6.5', '7'],
-        price: 2589.90,
+        price: 2589,
+      ),
+    ],
+  );
+
+  final tAllProductNoSizesModel = AllProductsModel(
+    [
+      ProductModel(
+        id: 'id01',
+        title: 'Jordan 1990',
+        details: 'Nostalgia de los 90s',
+        image: 'https://via.placeholder.com/150',
+        sizes: [],
+        price: 2589,
       ),
     ],
   );
@@ -41,35 +54,43 @@ void main() {
       },
     );
 
-/*
     test(
-      'should return a valid model when the JSON number is regarded as a double',
+      'should return a valid model when the JSON price is regarded as a double',
       () async {
         //arrange
         final Map<String, dynamic> jsonMap =
-            json.decode(fixture('trivia_double.json'));
+            json.decode(fixture('products_double_price.json'));
         //act
-        final result = NumberTriviaModel.fromJson(jsonMap);
+        final result = AllProductsModel.fromJson(jsonMap);
         //assert
-        expect(result, tNumberTriviaModel);
-      },
-    );*/
-  });
-
-/*
-  group('toJson =>', () {
-    test(
-      'should return a JSON map containing the proper data',
-      () async {
-        //arrange
-        final result = tNumberTriviaModel.toJson();
-        //assert
-        final expectedMap = {
-          "text": "Test Text",
-          "number": 1,
-        };
-        expect(result, expectedMap);
+        expect(result, tAllProductModel);
       },
     );
-  });*/
+
+    test(
+      'should return a valid model when the JSON size is empty',
+      () async {
+        //arrange
+        final Map<String, dynamic> jsonMap =
+            json.decode(fixture('products_empty_sizes.json'));
+        //act
+        final result = AllProductsModel.fromJson(jsonMap);
+        //assert
+        expect(result, tAllProductNoSizesModel);
+      },
+    );
+
+    test(
+      'should return a valid model when the JSON size is null',
+      () async {
+        //arrange
+        final Map<String, dynamic> jsonMap =
+            json.decode(fixture('products_sizes_null.json'));
+        //act
+        final result = AllProductsModel.fromJson(jsonMap);
+        //assert
+        expect(result, tAllProductNoSizesModel);
+      },
+    );
+  });
 }
