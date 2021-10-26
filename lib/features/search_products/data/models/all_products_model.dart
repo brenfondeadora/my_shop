@@ -1,11 +1,13 @@
-import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:my_shop/features/products/domain/entities/product.dart';
+import 'package:my_shop/features/search_products/domain/entities/all_product.dart';
+import 'package:my_shop/features/search_products/domain/entities/product.dart';
 
-class AllProductsModel extends Equatable {
-  List<ProductModel> products;
-
-  AllProductsModel(this.products);
+class AllProductsModel extends AllProduct {
+  AllProductsModel({
+    @required List<Product> products,
+  }) : super(
+          products: products,
+        );
 
   factory AllProductsModel.fromJson(Map<String, dynamic> json) {
     List<ProductModel> products = [];
@@ -16,7 +18,7 @@ class AllProductsModel extends Equatable {
     }
 
     return AllProductsModel(
-      products,
+      products: products,
     );
   }
 
@@ -25,9 +27,6 @@ class AllProductsModel extends Equatable {
       'products': products,
     };
   }
-
-  @override
-  List<Object> get props => [products];
 }
 
 class ProductModel extends Product {

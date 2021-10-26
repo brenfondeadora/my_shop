@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_shop/features/products/data/models/all_products_model.dart';
+import 'package:my_shop/features/search_products/data/models/all_products_model.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   final tAllProductModel = AllProductsModel(
-    [
+    products: [
       ProductModel(
         id: 'id01',
         title: 'Jordan 1990',
@@ -20,7 +20,7 @@ void main() {
   );
 
   final tAllProductNoSizesModel = AllProductsModel(
-    [
+    products: [
       ProductModel(
         id: 'id01',
         title: 'Jordan 1990',

@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_shop/features/products/domain/entities/product.dart';
-import 'package:my_shop/features/products/domain/repositories/product_repository.dart';
-import 'package:my_shop/features/products/domain/usecases/get_all_products.dart';
+import 'package:my_shop/features/search_products/domain/entities/product.dart';
+import 'package:my_shop/features/search_products/domain/repositories/product_repository.dart';
+import 'package:my_shop/features/search_products/domain/usecases/get_all_products.dart';
 
 class MockProductRepository extends Mock implements ProductRepository {}
 
